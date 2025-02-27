@@ -12,10 +12,21 @@ This project demonstrates how to create and manage a new development environment
 
 ```
 .
-├── main.tf
-├── variables.tf
-├── outputs.tf
-└── README.md
+├── environments/
+│   └── templates/
+│       ├── environment/
+│       │   ├── main.tf         # Environment-specific resources
+│       │   ├── variables.tf    # Environment variables
+│       │   └── outputs.tf      # Environment outputs
+│       └── web-app/
+│           ├── main.tf         # Web app configuration
+│           ├── variables.tf    # Web app variables  
+│           └── outputs.tf      # Web app outputs
+├── main.tf                     # Main configuration file
+├── variables.tf               # Global variables
+├── outputs.tf                # Global outputs
+└── README.md                 # Project documentation
+
 ```
 
 ## Usage
