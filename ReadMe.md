@@ -1,37 +1,46 @@
-# DotNet Team Terraform Learning Repository
+# Terraform Project for Dev Environment
 
-Welcome to the DotNet Team's Terraform learning repository! This repository is designed to help our team get up to speed with Terraform and its various features. We will be including some basic setup bits for us to customize during our session.
+This project demonstrates how to create and manage a new development environment using Terraform.
 
-## Getting Started
+## Prerequisites
 
-To get started with Terraform, follow these steps:
+- [Terraform](https://www.terraform.io/downloads.html) installed
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed
+- An Azure account
 
-1. **Install Terraform**: Download and install Terraform from the [official website](https://www.terraform.io/downloads.html).
-2. **Clone the Repository**: Clone this repository to your local machine using the following command:
+## Project Structure
+
+```
+.
+├── main.tf
+├── variables.tf
+├── outputs.tf
+└── README.md
+```
+
+## Usage
+
+1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/DotNetTeamSession.git
-    ```
-3. **Navigate to the Directory**: Change to the repository directory:
-    ```sh
+    git clone <repository-url>
     cd DotNetTeamSession
     ```
 
-## Repository Structure
+2. **Initialize Terraform:**
+    ```sh
+    terraform init
+    ```
 
-- `examples/`: Contains example Terraform configurations.
-- `modules/`: Contains reusable Terraform modules.
-- `scripts/`: Contains scripts to automate tasks.
-- `docs/`: Contains documentation and learning materials.
 
-## Contributing
+## Customization
 
-We encourage team collaboration! If you have any improvements or suggestions, please create a pull request or open an issue.
+To create a new environment easily, you can modify the `variables.tf` file to change the configuration parameters such as resource names, sizes, and regions.
 
 ## Resources
 
 - [Terraform Documentation](https://www.terraform.io/docs)
-- [Terraform Registry](https://registry.terraform.io/)
+- [Azure Provider Documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
 
-Happy learning!
+## License
 
-**DotNet Team**
+This project is licensed under the MIT License.
