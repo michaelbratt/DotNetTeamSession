@@ -15,7 +15,7 @@ resource "azurerm_service_plan" "appserviceplan" {
 
 # App 1
 module "App1" {
-  source   = "./module/app"
+  source   = "../app"
   env_name = var.env_name
   app_name = "App1"
   repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
@@ -24,7 +24,7 @@ module "App1" {
 
 # App 2
 module "App2" {
-  source   = "./module/app"
+  source   = "../app"
   env_name = var.env_name
   app_name = "App2"
   repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
