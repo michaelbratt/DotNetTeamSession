@@ -15,18 +15,26 @@ resource "azurerm_service_plan" "appserviceplan" {
 
 # App 1
 module "App1" {
-  source   = "../app"
-  env_name = var.env_name
-  app_name = "App1"
-  repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
-  branch   = "main"
+  source              = "../app"
+  env_name            = var.env_name
+  app_name            = "App1"
+  repo_url            = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
+  branch              = "main"
+  appserviceplan      = azurerm_service_plan.appserviceplan
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  service_plan_id     = azurerm_service_plan.appserviceplan.id
 }
 
 # App 2
 module "App2" {
-  source   = "../app"
-  env_name = var.env_name
-  app_name = "App2"
-  repo_url = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
-  branch   = "main"
+  source              = "../app"
+  env_name            = var.env_name
+  app_name            = "App2"
+  repo_url            = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
+  branch              = "main"
+  appserviceplan      = azurerm_service_plan.appserviceplan
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  service_plan_id     = azurerm_service_plan.appserviceplan.id
 }

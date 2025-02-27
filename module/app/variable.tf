@@ -17,3 +17,24 @@ variable "branch" {
   description = "The branch of the repo"
   type        = string
 }
+
+variable "appserviceplan" {
+  description = "The app service plan"
+  type        = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group"
+  type        = string
+}
+
+variable "location" {
+  description = "The location of the resource group"
+  type        = string
+}
+
+variable "service_plan_id" {
+  description = "The id of the service plan"
+  type        = string
+}
+
