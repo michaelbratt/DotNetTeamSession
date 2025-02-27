@@ -20,7 +20,7 @@ module "App1" {
   app_name            = "App1"
   repo_url            = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
   branch              = "main"
-  appserviceplan      = azurerm_service_plan.appserviceplan
+  appserviceplan      = [azurerm_service_plan.appserviceplan]
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   service_plan_id     = azurerm_service_plan.appserviceplan.id
@@ -33,7 +33,7 @@ module "App2" {
   app_name            = "App2"
   repo_url            = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
   branch              = "main"
-  appserviceplan      = azurerm_service_plan.appserviceplan
+  appserviceplan      = [azurerm_service_plan.appserviceplan]
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   service_plan_id     = azurerm_service_plan.appserviceplan.id
