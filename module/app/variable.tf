@@ -18,11 +18,6 @@ variable "branch" {
   type        = string
 }
 
-variable "appserviceplan" {
-  description = "The app service plan"
-  type        = string
-}
-
 variable "resource_group_name" {
   description = "The name of the resource group"
   type        = string
