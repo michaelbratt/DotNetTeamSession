@@ -28,7 +28,17 @@ variable "resource_group_location" {
   type        = string
 }
 
+variable "website_url" {
+  description = "The url of the website"
+  type        = string
+}
 
+variable "storm_url" {
+  description = "The url of storm"
+  type        = string
+}
 
-
-
+variable "branch_name" {
+  description = "The branch name of the app"
+  type        = string
+}

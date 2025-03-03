@@ -1,8 +1,3 @@
-variable "app_name" {
-  description = "The name of the app"
-  type        = string
-}
-
 variable "env_name" {
   description = "The name of the environment"
   type        = string
