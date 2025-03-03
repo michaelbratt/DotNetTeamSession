@@ -18,4 +18,9 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
   branch                 = var.branch
   use_manual_integration = true
   use_mercurial          = false
+
+  timeouts {
+    create = "10m"
+    delete = "10m"
+  }
 }
