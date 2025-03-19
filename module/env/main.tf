@@ -18,6 +18,7 @@ resource "azurerm_service_plan" "appserviceplan" {
 module "WebPortal" {
   source              = "../app"
   app_name            = "WebPortal"
+  username            = var.username
   env_name            = var.env_name
   repo_url            = var.website_url
   branch              = var.branch_name
@@ -30,6 +31,7 @@ module "WebPortal" {
 module "Storm" {
   source              = "../app"
   app_name            = "Storm"
+  username            = var.username
   env_name            = var.env_name
   repo_url            = var.storm_url
   branch              = var.branch_name

@@ -32,3 +32,8 @@ variable "app_name" {
   description = "The name of the app"
   type        = string
 }
+
+variable "username" {
+  description = "The username of the user"
+  type        = string
+}
