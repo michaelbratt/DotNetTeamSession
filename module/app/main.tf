@@ -10,6 +10,10 @@ resource "azurerm_linux_web_app" "webapp" {
       node_version = "16-lts"
     }
   }
+
+  provisioner "local-exec" {
+    command = "sleep 180" # Wait for 3 minutes
+  }
 }
 
 resource "azurerm_app_service_source_control" "sourcecontrol" {
@@ -18,9 +22,4 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
   branch                 = var.branch
   use_manual_integration = true
   use_mercurial          = false
-
-  timeouts {
-    create = "10m"
-    delete = "10m"
-  }
 }
