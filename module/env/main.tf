@@ -27,5 +27,3 @@ module "WebPortal" {
   service_plan_id     = azurerm_service_plan.appserviceplan.id
 }
 
-# App 2
-

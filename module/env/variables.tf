@@ -33,11 +33,6 @@ variable "website_url" {
   type        = string
 }
 
-variable "storm_url" {
-  description = "The url of storm"
-  type        = string
-}
-
 variable "branch_name" {
   description = "The branch name of the app"
   type        = string
