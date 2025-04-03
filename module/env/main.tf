@@ -27,3 +27,16 @@ module "WebPortal" {
   service_plan_id     = azurerm_service_plan.appserviceplan.id
 }
 
+# App 2
+module "Application2" {
+  source              = "../app"
+  app_name            = "Application2"
+  username            = var.username
+  env_name            = var.env_name
+  repo_url            = var.strom_url
+  branch              = var.branch_name
+  resource_group_name = var.resource_group_name
+  location            = var.resource_group_location
+  service_plan_id     = azurerm_service_plan.appserviceplan.id
+}
+
